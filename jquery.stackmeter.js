@@ -1,5 +1,5 @@
 /**
- * jQuery Bar Rating Plugin v0.9
+ * jQuery Stack Meter Plugin v0.9
  *
  * http://github.com/ferdonline/jquery-stackmeter
  *
@@ -92,7 +92,8 @@
                         
                         if( !finished_print ){
                             val = Math.round( subvalues_accu[cur_li] / ratio );
-                            for ( ; blk_n >= val && subvalues_accu.length>cur_li+1; cur_li++ ) {
+                            while( blk_n >= val && subvalues_accu.length>cur_li+1 ) {
+                                cur_li++;
                                 val = Math.round( subvalues_accu[cur_li] / ratio );
                             }
                             
